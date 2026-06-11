@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songo Distant (Ajax & PHP)</title>
+    <link rel="stylesheet" href="stylesongo2.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Songo Réseau Local (Ajax)</h1>
+        
+        <div id="role-selector">
+            <label for="player-role">Je joue en tant que : </label>
+            <select id="player-role">
+                <option value="1">Joueur 1 (Sud)</option>
+                <option value="2">Joueur 2 (Nord)</option>
+            </select>
+        </div>
+
+        <div id="status-panel">
+            <span id="turn-indicator">Tour : <strong id="current-player">Chargement...</strong></span>
+        </div>
+
+        <div class="songo-board">
+            <div class="storehouse" id="store-j2">
+                <h3>J2</h3>
+                <div class="pebbles-count" id="score-j2">0</div>
+                <p>Points</p>
+            </div>
+
+            <div class="rows-container">
+                <div class="board-row row-j2">
+                    <div class="pit" data-index="13"></div>
+                    <div class="pit" data-index="12"></div>
+                    <div class="pit" data-index="11"></div>
+                    <div class="pit" data-index="10"></div>
+                    <div class="pit" data-index="9"></div>
+                    <div class="pit" data-index="8"></div>
+                    <div class="pit" data-index="7"></div>
+                </div>
+
+                <div class="board-row row-j1">
+                    <div class="pit" data-index="0"></div>
+                    <div class="pit" data-index="1"></div>
+                    <div class="pit" data-index="2"></div>
+                    <div class="pit" data-index="3"></div>
+                    <div class="pit" data-index="4"></div>
+                    <div class="pit" data-index="5"></div>
+                    <div class="pit" data-index="6"></div>
+                </div>
+            </div>
+
+            <div class="storehouse" id="store-j1">
+                <h3>J1</h3>
+                <div class="pebbles-count" id="score-j1">0</div>
+                <p>Points</p>
+            </div>
+        </div>
+
+        <button id="reset-btn">Réinitialiser la partie générale</button>
+    </div>
+
+    <script src="scriptsongo2.js"></script>
+</body>
+</html>
